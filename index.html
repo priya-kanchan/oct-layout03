@@ -791,7 +791,60 @@
   <script src="js/intlTelInput.min.js"></script>
   <script src="js/intl.custom.js"></script>
 
+  <script type="text/javascript" language="javascript">
+    var versionUpdate = (new Date()).getTime();
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://api2.gtftech.com/scripts/queryform.min.ssl.js?v=" + versionUpdate;
+    document.body.appendChild(script);
+  </script>
 
+  <script>
+    var AgentInfo = {
+      "vAgentID": "****",
+      "vProject": "Project Name",
+      "vURL": "https://websitedesigningcompany.co.in/demo-gtf/kp-layout02/",
+      "thankspageurl": "https://websitedesigningcompany.co.in/demo-gtf/kp-layout02/thanks.htm",
+    };
+
+    $('#preferedtime').hide();
+
+    $("#SubmitQuery").click(function () {
+      var FormInfo = {
+        "SenderControlID": "qSenderName",
+        "SenderControlMobileID": "qMobileNo",
+        "SenderControlCountryCodeID": "qCountryCode",
+        "SenderControlEmailID": "qEmailID",
+        "SenderControlMsgID": "qMessage"
+      };
+
+      SubmitQueryData(AgentInfo, FormInfo);
+    });
+
+    $("#SubmitQuerypopup").click(function () {
+      var FormInfo = {
+        "SenderControlID": "qSenderNamepopup",
+        "SenderControlMobileID": "qMobileNopopup",
+        "SenderControlCountryCodeID": "qCountryCodepopup",
+        "SenderControlEmailID": "qEmailIDpopup",
+        "SenderControlMsgID": "qMessagepopup"
+      };
+
+      SubmitQueryData(AgentInfo, FormInfo);
+    });
+
+    $("#SubmitQueryfooter").click(function () {
+      var FormInfo = {
+        "SenderControlID": "qSenderNamefooter",
+        "SenderControlMobileID": "qMobileNofooter",
+        "SenderControlCountryCodeID": "qCountryCode4",
+        "SenderControlEmailID": "qEmailIDfooter",
+        "SenderControlMsgID": "qMessagefooter"
+      };
+
+      SubmitQueryData(AgentInfo, FormInfo);
+    });
+  </script>
 </body>
 
 </html>
